@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>
+      Resource Rates
+    </mat-card-title>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let resourceRate of resourceRates"
+        class="mat-list-option"
+        (click)="selected.emit(resourceRate)"
+      >
+        <span matLine>{{ resourceRate.title }}</span>
+        <button
+          *ngIf="!readonly"
+          mat-icon-button
+          type="button"
+          color="warn"
+          (click)="
+            deleted.emit(resourceRate); $event.stopImmediatePropagation()
+          "
+        >
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

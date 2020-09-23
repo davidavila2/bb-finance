@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>
+      Project Resources
+    </mat-card-title>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let projectResource of projectResources"
+        class="mat-list-option"
+        (click)="selected.emit(projectResource)"
+      >
+        <span matLine>{{ projectResource.title }}</span>
+        <button
+          *ngIf="!readonly"
+          mat-icon-button
+          type="button"
+          color="warn"
+          (click)="
+            deleted.emit(projectResource); $event.stopImmediatePropagation()
+          "
+        >
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

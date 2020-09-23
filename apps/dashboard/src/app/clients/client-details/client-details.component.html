@@ -1,0 +1,65 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="currentClient.id; else elseBlock">
+      {{ originalTitle | titlecase }}
+    </span>
+    <ng-template #elseBlock>
+      Select Client
+    </ng-template>
+  </mat-card-title>
+  <form #form="ngForm" (submit)="saved.emit(currentClient)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a name"
+          [(ngModel)]="currentClient.name"
+          type="input"
+          name="name"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a profile"
+          [(ngModel)]="currentClient.profile"
+          type="input"
+          name="profile"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Status</mat-label>
+        <mat-select
+          [(ngModel)]="currentClient.type"
+          required="false"
+          name="type"
+        >
+          <mat-option value="internal">
+            Internal </mat-option
+          ><mat-option value="fixed_bid">
+            Fixed Bid </mat-option
+          ><mat-option value="project_based">
+            Project Based </mat-option
+          ><mat-option value="staff_aug">
+            Staff Aug
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        [disabled]="form.invalid"
+        type="submit"
+        mat-button
+        color="primary"
+      >
+        Save
+      </button>
+      <button type="button" mat-button (click)="cancelled.emit()">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

@@ -1,0 +1,155 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="currentProjectResource.id; else elseBlock">
+      {{ originalTitle | titlecase }}
+    </span>
+    <ng-template #elseBlock>
+      Select ProjectResource
+    </ng-template>
+  </mat-card-title>
+  <form #form="ngForm" (submit)="saved.emit(currentProjectResource)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Project Id"
+          [(ngModel)]="currentProjectResource.projectId"
+          type="input"
+          name="projectId"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Resource Id"
+          [(ngModel)]="currentProjectResource.resourceId"
+          type="input"
+          name="resourceId"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Resource Level</mat-label>
+        <mat-select
+          [(ngModel)]="currentProjectResource.resourceLevel"
+          required="false"
+          name="resourceLevel"
+        >
+          <mat-option value="strategy">
+            Srategy </mat-option
+          ><mat-option value="gde">
+            GDE </mat-option
+          ><mat-option value="architect">
+            Aarchitect </mat-option
+          ><mat-option value="senior">
+            Senior </mat-option
+          ><mat-option value="high_mid">
+            High Mid </mat-option
+          ><mat-option value="mid">
+            Mid </mat-option
+          ><mat-option value="junior">
+            Junior </mat-option
+          ><mat-option value="pm">
+            Project Manager
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Resource Type</mat-label>
+        <mat-select
+          [(ngModel)]="currentProjectResource.resourceType"
+          required="false"
+          name="resourceType"
+        >
+          <mat-option value="contractor">
+            Contractor </mat-option
+          ><mat-option value="employee">
+            Employee </mat-option
+          ><mat-option value="intern">
+            Intern
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Execution Type</mat-label>
+        <mat-select
+          [(ngModel)]="currentProjectResource.executionType"
+          required="false"
+          name="executionType"
+        >
+          <mat-option value="execution">
+            Execution </mat-option
+          ><mat-option value="strategy">
+            Strategy </mat-option
+          ><mat-option value="training">
+            Training
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Start Date"
+          [(ngModel)]="currentProjectResource.startDate"
+          type="input"
+          name="startDate"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter End Date"
+          [(ngModel)]="currentProjectResource.endDate"
+          type="input"
+          name="endDate"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter an internal rate"
+          [(ngModel)]="currentProjectResource.internalRate"
+          type="input"
+          name="internalRate"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter an billable rate"
+          [(ngModel)]="currentProjectResource.billableRate"
+          type="input"
+          name="billableRate"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <textarea
+          matInput
+          placeholder="Enter a note here"
+          [(ngModel)]="currentProjectResource.notes"
+          type="text"
+          name="notes"
+          required="true"
+        ></textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        [disabled]="form.invalid"
+        type="submit"
+        mat-button
+        color="primary"
+      >
+        Save
+      </button>
+      <button type="button" mat-button (click)="cancelled.emit()">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

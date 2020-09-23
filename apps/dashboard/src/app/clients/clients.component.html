@@ -1,0 +1,10 @@
+<div class="component-container">
+  <div class="list-component">
+    <bba-clients-list [clients]="clients$ | async" (selected)="selectClient($event)" (deleted)="deleteClient($event)">
+    </bba-clients-list>
+  </div>
+  <div class="details-component">
+    <bba-client-details [client]="selectedClient$ | async" (saved)="saveClient($event)" (cancelled)="reset()">
+    </bba-client-details>
+  </div>
+</div>

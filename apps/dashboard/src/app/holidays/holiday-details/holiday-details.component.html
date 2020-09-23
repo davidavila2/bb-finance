@@ -1,0 +1,62 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="currentHoliday.id; else elseBlock">
+      {{ originalTitle | titlecase }}
+    </span>
+    <ng-template #elseBlock>
+      Select Holiday
+    </ng-template>
+  </mat-card-title>
+  <form #form="ngForm" (submit)="saved.emit(currentHoliday)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a year"
+          [(ngModel)]="currentHoliday.year"
+          type="number"
+          name="year"
+          required="false"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="datePicker"
+          name="date"
+          [(ngModel)]="currentHoliday.date"
+          required="false"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="datePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #datePicker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter the holiday name"
+          [(ngModel)]="currentHoliday.name"
+          type="input"
+          name="name"
+          required="false"
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        [disabled]="form.invalid"
+        type="submit"
+        mat-button
+        color="primary"
+      >
+        Save
+      </button>
+      <button type="button" mat-button (click)="cancelled.emit()">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

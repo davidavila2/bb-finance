@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <bba-tsheets-extracts-list
+      [tsheetsExtracts]="tsheetsExtracts$ | async"
+      (selected)="selectTsheetsExtract($event)"
+      (deleted)="deleteTsheetsExtract($event)"
+    >
+    </bba-tsheets-extracts-list>
+  </div>
+  <div class="details-component">
+    <bba-tsheets-extract-details
+      [tsheetsExtract]="selectedTsheetsExtract$ | async"
+      (saved)="saveTsheetsExtract($event)"
+      (cancelled)="reset()"
+    >
+    </bba-tsheets-extract-details>
+  </div>
+</div>

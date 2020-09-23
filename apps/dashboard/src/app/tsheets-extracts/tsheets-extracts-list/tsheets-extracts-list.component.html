@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>
+      Tsheets Extracts
+    </mat-card-title>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let tsheetsExtract of tsheetsExtracts"
+        class="mat-list-option"
+        (click)="selected.emit(tsheetsExtract)"
+      >
+        <span matLine>{{ tsheetsExtract.title }}</span>
+        <button
+          *ngIf="!readonly"
+          mat-icon-button
+          type="button"
+          color="warn"
+          (click)="
+            deleted.emit(tsheetsExtract); $event.stopImmediatePropagation()
+          "
+        >
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

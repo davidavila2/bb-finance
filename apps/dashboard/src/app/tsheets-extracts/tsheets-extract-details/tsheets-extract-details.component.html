@@ -1,0 +1,65 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="currentTsheetsExtract.id; else elseBlock">
+      {{ originalTitle | titlecase }}
+    </span>
+    <ng-template #elseBlock>
+      Select TsheetsExtract
+    </ng-template>
+  </mat-card-title>
+  <form #form="ngForm" (submit)="saved.emit(currentTsheetsExtract)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a Date"
+          [(ngModel)]="currentTsheetsExtract.localDate"
+          type="input"
+          name="localDate"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Hours"
+          [(ngModel)]="currentTsheetsExtract.hours"
+          type="input"
+          name="hours"
+          required="true"
+        />
+      </mat-form-field>
+      <section>
+        <mat-checkbox
+          name="billable"
+          [(ngModel)]="currentTsheetsExtract.billable"
+        >
+          Is this billable?
+        </mat-checkbox>
+      </section>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter TSheets Job Code"
+          [(ngModel)]="currentTsheetsExtract.jobCode"
+          type="number"
+          name="jobCode"
+          required="true"
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        [disabled]="form.invalid"
+        type="submit"
+        mat-button
+        color="primary"
+      >
+        Save
+      </button>
+      <button type="button" mat-button (click)="cancelled.emit()">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

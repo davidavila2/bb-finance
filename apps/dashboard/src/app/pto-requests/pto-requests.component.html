@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <bba-pto-requests-list
+      [ptoRequests]="ptoRequests$ | async"
+      (selected)="selectPtoRequest($event)"
+      (deleted)="deletePtoRequest($event)"
+    >
+    </bba-pto-requests-list>
+  </div>
+  <div class="details-component">
+    <bba-pto-request-details
+      [ptoRequest]="selectedPtoRequest$ | async"
+      (saved)="savePtoRequest($event)"
+      (cancelled)="reset()"
+    >
+    </bba-pto-request-details>
+  </div>
+</div>

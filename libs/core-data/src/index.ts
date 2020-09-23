@@ -1,0 +1,10 @@
+export { CoreDataModule } from './lib/core-data.module';
+export { ClientsService } from './lib/services/clients/clients.service';
+export { DailyHourlyLogsService } from './lib/services/daily-hourly-logs/daily-hourly-logs.service';
+export { HolidaysService } from './lib/services/holidays/holidays.service';
+export { ProjectsService } from './lib/services/projects/projects.service';
+export { ProjectResourcesService } from './lib/services/project-resources/project-resources.service';
+export { PtoRequestsService } from './lib/services/pto-requests/pto-requests.service';
+export { ResourcesService } from './lib/services/resources/resources.service';
+export { ResourceRatesService } from './lib/services/resource-rates/resource-rates.service';
+export { TsheetsExtractsService } from './lib/services/tsheets-extracts/tsheets-extracts.service';

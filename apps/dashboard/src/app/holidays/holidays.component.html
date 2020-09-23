@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <bba-holidays-list
+      [holidays]="holidays$ | async"
+      (selected)="selectHoliday($event)"
+      (deleted)="deleteHoliday($event)"
+    >
+    </bba-holidays-list>
+  </div>
+  <div class="details-component">
+    <bba-holiday-details
+      [holiday]="selectedHoliday$ | async"
+      (saved)="saveHoliday($event)"
+      (cancelled)="reset()"
+    >
+    </bba-holiday-details>
+  </div>
+</div>

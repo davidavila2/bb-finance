@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <bba-daily-hourly-logs-list
+      [dailyHourlyLogs]="dailyHourlyLogs$ | async"
+      (selected)="selectDailyHourlyLog($event)"
+      (deleted)="deleteDailyHourlyLog($event)"
+    >
+    </bba-daily-hourly-logs-list>
+  </div>
+  <div class="details-component">
+    <bba-daily-hourly-log-details
+      [dailyHourlyLog]="selectedDailyHourlyLog$ | async"
+      (saved)="saveDailyHourlyLog($event)"
+      (cancelled)="reset()"
+    >
+    </bba-daily-hourly-log-details>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <bba-projects-list
+      [projects]="projects$ | async"
+      (selected)="selectProject($event)"
+      (deleted)="deleteProject($event)"
+    >
+    </bba-projects-list>
+  </div>
+  <div class="details-component">
+    <bba-project-details
+      [project]="selectedProject$ | async"
+      (saved)="saveProject($event)"
+      (cancelled)="reset()"
+    >
+    </bba-project-details>
+  </div>
+</div>

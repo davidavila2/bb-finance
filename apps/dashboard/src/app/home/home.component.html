@@ -1,0 +1,38 @@
+<div class="home-container">
+  <bba-clients-list
+    [clients]="clients$ | async"
+    [readonly]="true"
+  ></bba-clients-list>
+  <bba-daily-hourly-logs-list
+    [dailyHourlyLogs]="dailyHourlyLogs$ | async"
+    [readonly]="true"
+  ></bba-daily-hourly-logs-list>
+  <bba-holidays-list
+    [holidays]="holidays$ | async"
+    [readonly]="true"
+  ></bba-holidays-list>
+  <bba-projects-list
+    [projects]="projects$ | async"
+    [readonly]="true"
+  ></bba-projects-list>
+  <bba-project-resources-list
+    [projectResources]="projectResources$ | async"
+    [readonly]="true"
+  ></bba-project-resources-list>
+  <bba-pto-requests-list
+    [ptoRequests]="ptoRequests$ | async"
+    [readonly]="true"
+  ></bba-pto-requests-list>
+  <bba-resources-list
+    [resources]="resources$ | async"
+    [readonly]="true"
+  ></bba-resources-list>
+  <bba-resource-rates-list
+    [resourceRates]="resourceRates$ | async"
+    [readonly]="true"
+  ></bba-resource-rates-list>
+  <bba-tsheets-extracts-list
+    [tsheetsExtracts]="tsheetsExtracts$ | async"
+    [readonly]="true"
+  ></bba-tsheets-extracts-list>
+</div>

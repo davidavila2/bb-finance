@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <bba-resource-rates-list
+      [resourceRates]="resourceRates$ | async"
+      (selected)="selectResourceRate($event)"
+      (deleted)="deleteResourceRate($event)"
+    >
+    </bba-resource-rates-list>
+  </div>
+  <div class="details-component">
+    <bba-resource-rate-details
+      [resourceRate]="selectedResourceRate$ | async"
+      (saved)="saveResourceRate($event)"
+      (cancelled)="reset()"
+    >
+    </bba-resource-rate-details>
+  </div>
+</div>

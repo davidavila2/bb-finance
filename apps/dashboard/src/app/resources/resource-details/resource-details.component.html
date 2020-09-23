@@ -1,0 +1,71 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="currentResource.id; else elseBlock">
+      {{ originalTitle | titlecase }}
+    </span>
+    <ng-template #elseBlock>
+      Select Resource
+    </ng-template>
+  </mat-card-title>
+  <form #form="ngForm" (submit)="saved.emit(currentResource)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a name"
+          [(ngModel)]="currentResource.firstName"
+          type="input"
+          name="firstName"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a last name"
+          [(ngModel)]="currentResource.lastName"
+          type="input"
+          name="lastName"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a first name alias"
+          [(ngModel)]="currentResource.firstNameAlias"
+          type="input"
+          name="firstNameAlias"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Status</mat-label>
+        <mat-select
+          [(ngModel)]="currentResource.status"
+          required="false"
+          name="status"
+        >
+          <mat-option value="active">
+            Active </mat-option
+          ><mat-option value="inactive">
+            Inactive
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        [disabled]="form.invalid"
+        type="submit"
+        mat-button
+        color="primary"
+      >
+        Save
+      </button>
+      <button type="button" mat-button (click)="cancelled.emit()">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

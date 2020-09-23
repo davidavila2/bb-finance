@@ -1,0 +1,159 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="currentProject.id; else elseBlock">
+      {{ originalTitle | titlecase }}
+    </span>
+    <ng-template #elseBlock>
+      Select Project
+    </ng-template>
+  </mat-card-title>
+  <form #form="ngForm" (submit)="saved.emit(currentProject)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Client Id"
+          [(ngModel)]="currentProject.clientId"
+          type="input"
+          name="clientId"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Start Date"
+          [(ngModel)]="currentProject.startDate"
+          type="input"
+          name="startDate"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter End Date"
+          [(ngModel)]="currentProject.endDate"
+          type="input"
+          name="endDate"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Status</mat-label>
+        <mat-select
+          [(ngModel)]="currentProject.status"
+          required="false"
+          name="status"
+        >
+          <mat-option value="active">
+            Active </mat-option
+          ><mat-option value="complete">
+            Complete </mat-option
+          ><mat-option value="paused">
+            Paused </mat-option
+          ><mat-option value="pending">
+            Pending </mat-option
+          ><mat-option value="blocked">
+            Blocked </mat-option
+          ><mat-option value="opportunity">
+            opportunity
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <textarea
+          matInput
+          placeholder="Enter a note here"
+          [(ngModel)]="currentProject.notes"
+          type="text"
+          name="notes"
+          required="true"
+        ></textarea>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a Net Term Days"
+          [(ngModel)]="currentProject.netTermDays"
+          type="input"
+          name="netTermDays"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Billing Cycle</mat-label>
+        <mat-select
+          [(ngModel)]="currentProject.billingCycle"
+          required="false"
+          name="billingCycle"
+        >
+          <mat-option value="deposit">
+            Deposit </mat-option
+          ><mat-option value="upfront">
+            Upfront </mat-option
+          ><mat-option value="first_week">
+            First Week </mat-option
+          ><mat-option value="second_week">
+            Second Week </mat-option
+          ><mat-option value="eom">
+            End of Month
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Contract Length Weeks Here"
+          [(ngModel)]="currentProject.contractLengthWeeks"
+          type="input"
+          name="contractLengthWeeks"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Contract Length Hours Here"
+          [(ngModel)]="currentProject.contractLengthHours"
+          type="input"
+          name="contractLengthHours"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Project Discount Here"
+          [(ngModel)]="currentProject.projectDiscount"
+          type="input"
+          name="projectDiscount"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter Job Code Here"
+          [(ngModel)]="currentProject.jobCode"
+          type="input"
+          name="jobCode"
+          required="true"
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        [disabled]="form.invalid"
+        type="submit"
+        mat-button
+        color="primary"
+      >
+        Save
+      </button>
+      <button type="button" mat-button (click)="cancelled.emit()">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

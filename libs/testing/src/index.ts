@@ -1,0 +1,10 @@
+export { TestingModule } from './lib/testing.module';
+export * from './lib/mocks/clients.mocks';
+export * from './lib/mocks/daily-hourly-logs.mocks';
+export * from './lib/mocks/holidays.mocks';
+export * from './lib/mocks/projects.mocks';
+export * from './lib/mocks/project-resources.mocks';
+export * from './lib/mocks/pto-requests.mocks';
+export * from './lib/mocks/resources.mocks';
+export * from './lib/mocks/resource-rates.mocks';
+export * from './lib/mocks/tsheets-extracts.mocks';
