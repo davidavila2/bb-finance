@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DailyHourlyLog } from '@bba/api-interfaces';
-import { DailyHourlyLogsFacade } from '@bba/core-state';
+import { DailyHourlyLogsFacade, ResourcesFacade } from '@bba/core-state';
 
 @Component({
   selector: 'bba-daily-hourly-logs',
@@ -9,12 +9,10 @@ import { DailyHourlyLogsFacade } from '@bba/core-state';
   styleUrls: ['./daily-hourly-logs.component.scss'],
 })
 export class DailyHourlyLogsComponent implements OnInit {
-  dailyHourlyLogs$: Observable<DailyHourlyLog[]> = this.dailyHourlyLogsFacade
-    .allDailyHourlyLogs$;
-  selectedDailyHourlyLog$: Observable<DailyHourlyLog> = this
-    .dailyHourlyLogsFacade.selectedDailyHourlyLog$;
+  dailyHourlyLogs$: Observable<DailyHourlyLog[]> = this.dailyHourlyLogsFacade.allDailyHourlyLogs$;
+  selectedDailyHourlyLog$: Observable<DailyHourlyLog> = this.dailyHourlyLogsFacade.selectedDailyHourlyLog$;
 
-  constructor(private dailyHourlyLogsFacade: DailyHourlyLogsFacade) {}
+  constructor(private dailyHourlyLogsFacade: DailyHourlyLogsFacade) { }
 
   ngOnInit(): void {
     this.reset();

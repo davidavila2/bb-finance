@@ -22,8 +22,8 @@
   "daily-hourly-logs": [
     {
       "id": "32e90452-97d3-4089-b58d-eddf31dc8d66",
-      "resourceId": "af0577ca-8e02-4dcf-a88a-fb44dedfc8b3",
-      "date": "Tue Sep 22 2020 20:02:55 GMT-0700 (Mountain Standard Time)",
+      "resourceId": "4fb1f296-1db4-4003-a81c-a8bdacce12fa",
+      "date": "2020-09-23T07:00:00.000Z",
       "hours": "68778",
       "ptoHours": "81850",
       "holidayHours": "7815",
@@ -31,8 +31,8 @@
     },
     {
       "id": "587ae08b-0e7c-402c-b4e3-c34edd60661b",
-      "resourceId": "3aa5295d-728f-4482-b570-a8b34ca3fa48",
-      "date": "Wed Sep 23 2020 07:21:17 GMT-0700 (Mountain Standard Time)",
+      "resourceId": "84ac1098-196c-47cb-9cdc-01e54b15358b",
+      "date": "2020-09-23T07:00:00.000Z",
       "hours": "3179",
       "ptoHours": "52369",
       "holidayHours": "30215",
@@ -40,8 +40,8 @@
     },
     {
       "id": "0fe50052-0eb2-476e-813a-48a1194e762f",
-      "resourceId": "727919b1-0b81-4a6b-8ba3-370e4867fe90",
-      "date": "Wed Sep 23 2020 03:50:26 GMT-0700 (Mountain Standard Time)",
+      "resourceId": "105f9bb8-b501-4d7b-97f2-719077c3fee5",
+      "date": "2020-09-24T07:00:00.000Z",
       "hours": "61378",
       "ptoHours": "65267",
       "holidayHours": "76151",
@@ -74,10 +74,10 @@
       "clientId": "b0ecd48b-06d6-4692-beb3-b39932ddbcc1",
       "startDate": "Tue Sep 22 2020 17:40:47 GMT-0700 (Mountain Standard Time)",
       "endDate": "Tue Sep 22 2020 12:43:12 GMT-0700 (Mountain Standard Time)",
-      "status": "ac53bc3a-e06a-4cdf-b0f4-2f8331ed0104",
+      "status": "active",
       "notes": "Sed laboriosam et eius.",
       "netTermDays": "facere",
-      "billingCycle": "4d37b378-e3e3-4ad1-b84a-f1b4547b9a56",
+      "billingCycle": "deposit",
       "contractLengthWeeks": "9898",
       "contractLengthHours": "51317",
       "projectDiscount": "67713",
@@ -88,10 +88,10 @@
       "clientId": "7466fcf2-42ca-452c-a68a-a0f640e3c9b5",
       "startDate": "Wed Sep 23 2020 08:37:48 GMT-0700 (Mountain Standard Time)",
       "endDate": "Wed Sep 23 2020 01:01:36 GMT-0700 (Mountain Standard Time)",
-      "status": "8b79fe0a-9544-468c-8548-c0c72033b5cb",
+      "status": "paused",
       "notes": "Dolore natus sed.",
       "netTermDays": "commodi",
-      "billingCycle": "34acb568-ac2f-4f90-b556-a4ef5aadc180",
+      "billingCycle": "first_week",
       "contractLengthWeeks": "80343",
       "contractLengthHours": "19539",
       "projectDiscount": "91519",
@@ -102,10 +102,10 @@
       "clientId": "4aaf1234-c9e1-4ef0-a02d-b3fb03175319",
       "startDate": "Tue Sep 22 2020 15:27:48 GMT-0700 (Mountain Standard Time)",
       "endDate": "Tue Sep 22 2020 18:02:38 GMT-0700 (Mountain Standard Time)",
-      "status": "c644a5e0-08bd-495f-866c-2c08ba7c8948",
+      "status": "blocked",
       "notes": "Voluptas ullam officiis rerum beatae consectetur possimus voluptas commodi.",
       "netTermDays": "amet",
-      "billingCycle": "7b549723-621f-4a44-8f93-9eb3b9c31d35",
+      "billingCycle": "eom",
       "contractLengthWeeks": "56117",
       "contractLengthHours": "89986",
       "projectDiscount": "52651",
@@ -117,9 +117,9 @@
       "id": "951a22fa-8495-4a26-9924-aacaa4c876ce",
       "projectId": "4dee79c9-9088-486c-812c-d46b267c48d3",
       "resourceId": "59fe722f-b4bc-452e-91f3-52bb1888572e",
-      "resourceLevel": "48fe3f6d-b26d-4976-aa31-297e04b1a1bd",
-      "resourceType": "9b21e82e-3bf7-4646-bba9-9100764bf12e",
-      "executionType": "e80a0ea8-e608-4432-b4ae-e9a46721f3bf",
+      "resourceLevel": "strategy",
+      "resourceType": "contractor",
+      "executionType": "execution",
       "startDate": "Wed Sep 23 2020 04:03:02 GMT-0700 (Mountain Standard Time)",
       "endDate": "Wed Sep 23 2020 03:23:40 GMT-0700 (Mountain Standard Time)",
       "internalRate": "b",
@@ -130,9 +130,9 @@
       "id": "d3eba587-164f-477e-93b4-2489943c1243",
       "projectId": "c3e38be7-3a8b-48f9-8cab-d2bf1226223f",
       "resourceId": "7576719b-a69e-4231-878a-e4e977343546",
-      "resourceLevel": "8000b5e4-2371-4053-896e-0cdad8686183",
-      "resourceType": "41569f2d-9e3c-420f-beaa-a33d86340d61",
-      "executionType": "5a667cef-c21e-4811-ae67-c40a7c2ae0cb",
+      "resourceLevel": "architect",
+      "resourceType": "employee",
+      "executionType": "strategy",
       "startDate": "Tue Sep 22 2020 12:32:07 GMT-0700 (Mountain Standard Time)",
       "endDate": "Wed Sep 23 2020 06:40:34 GMT-0700 (Mountain Standard Time)",
       "internalRate": "j",
@@ -143,9 +143,9 @@
       "id": "321f63cd-f60f-40e1-b3a4-ec67337ebcad",
       "projectId": "4320a23e-cca4-4fe2-b983-c0c02344165c",
       "resourceId": "c0f521e1-dcc4-4ad2-a269-0e958cf0d12b",
-      "resourceLevel": "c7b36712-2cca-4327-b1eb-423bbc7b41ed",
-      "resourceType": "f19d1a32-21af-4df8-9846-e607746461f7",
-      "executionType": "27429832-f88e-4af3-ad8e-52a290a032e6",
+      "resourceLevel": "mid",
+      "resourceType": "intern",
+      "executionType": "training",
       "startDate": "Tue Sep 22 2020 17:55:14 GMT-0700 (Mountain Standard Time)",
       "endDate": "Wed Sep 23 2020 02:46:35 GMT-0700 (Mountain Standard Time)",
       "internalRate": "i",
@@ -156,20 +156,20 @@
   "pto-requests": [
     {
       "id": "7d5b6dc1-cd05-400c-9dcd-0c47adf2679a",
-      "resourceId": "85cb0f61-c658-48fa-ae4c-34b3eb67dd58",
-      "date": "Tue Sep 22 2020 11:40:32 GMT-0700 (Mountain Standard Time)",
+      "resourceId": "4fb1f296-1db4-4003-a81c-a8bdacce12fa",
+      "date": "2020-09-01T07:00:00.000Z",
       "hours": "67656"
     },
     {
       "id": "b9e7921b-c3c4-4272-b162-f0ace62cb0f1",
-      "resourceId": "d8fac60b-b100-4968-a8b2-128733a7c9ea",
-      "date": "Tue Sep 22 2020 09:16:18 GMT-0700 (Mountain Standard Time)",
+      "resourceId": "84ac1098-196c-47cb-9cdc-01e54b15358b",
+      "date": "2020-09-02T07:00:00.000Z",
       "hours": "53538"
     },
     {
       "id": "8051eac2-3559-487a-9bde-2f9619408a21",
-      "resourceId": "4b58bdd4-13e6-47e1-af1a-406a212501da",
-      "date": "Wed Sep 23 2020 03:05:34 GMT-0700 (Mountain Standard Time)",
+      "resourceId": "105f9bb8-b501-4d7b-97f2-719077c3fee5",
+      "date": "2020-09-24T07:00:00.000Z",
       "hours": "73129"
     }
   ],
@@ -179,51 +179,51 @@
       "firstName": "Felicita",
       "lastName": "Ziemann",
       "firstNameAlias": "Osborne",
-      "status": "43a97cc3-204b-4227-9e97-6e1f27666415"
+      "status": "active"
     },
     {
       "id": "84ac1098-196c-47cb-9cdc-01e54b15358b",
       "firstName": "Alford",
       "lastName": "Wuckert",
       "firstNameAlias": "Gideon",
-      "status": "71a8ff9d-88b1-4672-94b1-f38452c594de"
+      "status": "inactive"
     },
     {
       "id": "105f9bb8-b501-4d7b-97f2-719077c3fee5",
       "firstName": "Denis",
       "lastName": "Dickinson",
       "firstNameAlias": "Remington",
-      "status": "7c3e888a-0af6-4533-bb65-5fb32dbf89e5"
+      "status": "active"
     }
   ],
   "resource-rates": [
     {
       "id": "81ff1b79-a5a0-4dff-a262-cc60a37bed32",
-      "resourceLevel": "4bca9f22-4c41-4bc8-9c72-831cd00966b3",
-      "resourceType": "5d86d803-8c8c-4d97-b440-efe74b757a14",
+      "resourceLevel": "mid",
+      "resourceType": "employee",
       "internalRate": "f",
       "salary": "72958",
-      "status": "e664b36d-4995-4d0b-8e5e-2eea7273c4b1",
+      "status": "active",
       "startDate": "Tue Sep 22 2020 15:07:55 GMT-0700 (Mountain Standard Time)",
       "endDate": "Tue Sep 22 2020 17:30:01 GMT-0700 (Mountain Standard Time)"
     },
     {
       "id": "8d86d0a4-e625-4a76-b035-af6fddc7a306",
-      "resourceLevel": "06caa907-1b90-408e-89a5-34237064c6f5",
-      "resourceType": "7ddffba3-0486-43d0-b889-b95d106a16db",
+      "resourceLevel": "architect",
+      "resourceType": "employee",
       "internalRate": "x",
       "salary": "69141",
-      "status": "74aafa19-690e-4bad-96d3-7584590010e6",
+      "status": "inactive",
       "startDate": "Tue Sep 22 2020 18:01:56 GMT-0700 (Mountain Standard Time)",
       "endDate": "Wed Sep 23 2020 08:34:07 GMT-0700 (Mountain Standard Time)"
     },
     {
       "id": "63ee9bc4-c02b-4357-a16e-a0b43b4d57f9",
-      "resourceLevel": "d27fca14-d7cd-4dde-a365-2e474c1b03a5",
-      "resourceType": "cf24af83-2edd-46da-9a25-94608ee64f98",
+      "resourceLevel": "strategy",
+      "resourceType": "employee",
       "internalRate": "v",
       "salary": "89857",
-      "status": "ab37fe0c-3c0e-4bba-9949-d31c5c5ce306",
+      "status": "active",
       "startDate": "Tue Sep 22 2020 09:11:37 GMT-0700 (Mountain Standard Time)",
       "endDate": "Tue Sep 22 2020 22:52:05 GMT-0700 (Mountain Standard Time)"
     }

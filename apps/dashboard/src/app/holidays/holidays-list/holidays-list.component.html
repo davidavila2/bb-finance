@@ -4,19 +4,10 @@
       Holidays
     </mat-card-title>
     <mat-list>
-      <mat-list-item
-        *ngFor="let holiday of holidays"
-        class="mat-list-option"
-        (click)="selected.emit(holiday)"
-      >
-        <span matLine>{{ holiday.title }}</span>
-        <button
-          *ngIf="!readonly"
-          mat-icon-button
-          type="button"
-          color="warn"
-          (click)="deleted.emit(holiday); $event.stopImmediatePropagation()"
-        >
+      <mat-list-item *ngFor="let holiday of holidays" class="mat-list-option" (click)="selected.emit(holiday)">
+        <span matLine>{{ holiday.name }}</span>
+        <button *ngIf="!readonly" mat-icon-button type="button" color="warn"
+          (click)="deleted.emit(holiday); $event.stopImmediatePropagation()">
           <mat-icon>clear</mat-icon>
         </button>
       </mat-list-item>

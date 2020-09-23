@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { PtoRequest } from '@bba/api-interfaces';
+import { ResourcesFacade } from '@bba/core-state';
 
 @Component({
   selector: 'bba-pto-request-details',
@@ -16,4 +17,8 @@ export class PtoRequestDetailsComponent {
   }
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();
+
+  constructor(public resourcesFacade: ResourcesFacade) {
+    this.resourcesFacade.loadResources();
+  }
 }

@@ -4,19 +4,10 @@
       Pto Requests
     </mat-card-title>
     <mat-list>
-      <mat-list-item
-        *ngFor="let ptoRequest of ptoRequests"
-        class="mat-list-option"
-        (click)="selected.emit(ptoRequest)"
-      >
-        <span matLine>{{ ptoRequest.title }}</span>
-        <button
-          *ngIf="!readonly"
-          mat-icon-button
-          type="button"
-          color="warn"
-          (click)="deleted.emit(ptoRequest); $event.stopImmediatePropagation()"
-        >
+      <mat-list-item *ngFor="let ptoRequest of ptoRequests" class="mat-list-option" (click)="selected.emit(ptoRequest)">
+        <span matLine>{{ ptoRequest.id }}</span>
+        <button *ngIf="!readonly" mat-icon-button type="button" color="warn"
+          (click)="deleted.emit(ptoRequest); $event.stopImmediatePropagation()">
           <mat-icon>clear</mat-icon>
         </button>
       </mat-list-item>

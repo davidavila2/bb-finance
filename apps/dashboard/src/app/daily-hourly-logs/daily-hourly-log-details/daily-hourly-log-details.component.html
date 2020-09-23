@@ -11,76 +11,38 @@
     <mat-card-content>
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Resource</mat-label>
-        <mat-select
-          [(ngModel)]="currentDailyHourlyLog.resourceId"
-          required="false"
-          name="resourceId"
-        >
+        <mat-select [(ngModel)]="currentDailyHourlyLog.resourceId" required="false" name="resourceId">
+          <mat-option [value]="resource.id" *ngFor="let resource of resourcesFacade.allResources$ | async">
+            {{resource.firstName}}
+          </mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>date</mat-label>
-        <input
-          matInput
-          [matDatepicker]="datePicker"
-          name="date"
-          [(ngModel)]="currentDailyHourlyLog.date"
-          required="false"
-        />
-        <mat-datepicker-toggle
-          matSuffix
-          [for]="datePicker"
-        ></mat-datepicker-toggle>
+        <input matInput [matDatepicker]="datePicker" name="date" [(ngModel)]="currentDailyHourlyLog.date"
+          required="false" />
+        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
         <mat-datepicker #datePicker></mat-datepicker>
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="Enter hours"
-          [(ngModel)]="currentDailyHourlyLog.hours"
-          type="number"
-          name="hours"
-          required="false"
-        />
+        <input matInput placeholder="Enter hours" [(ngModel)]="currentDailyHourlyLog.hours" type="number" name="hours"
+          required="false" />
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="Enter PTO hours"
-          [(ngModel)]="currentDailyHourlyLog.ptoHours"
-          type="number"
-          name="ptoHours"
-          required="false"
-        />
+        <input matInput placeholder="Enter PTO hours" [(ngModel)]="currentDailyHourlyLog.ptoHours" type="number"
+          name="ptoHours" required="false" />
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="Enter holiday hours"
-          [(ngModel)]="currentDailyHourlyLog.holidayHours"
-          type="number"
-          name="holidayHours"
-          required="false"
-        />
+        <input matInput placeholder="Enter holiday hours" [(ngModel)]="currentDailyHourlyLog.holidayHours" type="number"
+          name="holidayHours" required="false" />
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="Enter capacity hours"
-          [(ngModel)]="currentDailyHourlyLog.capacityHours"
-          type="number"
-          name="capacityHours"
-          required="false"
-        />
+        <input matInput placeholder="Enter capacity hours" [(ngModel)]="currentDailyHourlyLog.capacityHours"
+          type="number" name="capacityHours" required="false" />
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
-      <button
-        [disabled]="form.invalid"
-        type="submit"
-        mat-button
-        color="primary"
-      >
+      <button [disabled]="form.invalid" type="submit" mat-button color="primary">
         Save
       </button>
       <button type="button" mat-button (click)="cancelled.emit()">

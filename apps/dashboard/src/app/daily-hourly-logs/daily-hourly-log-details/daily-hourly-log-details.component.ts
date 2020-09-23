@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { DailyHourlyLog } from '@bba/api-interfaces';
+import { ResourcesFacade } from '@bba/core-state';
 
 @Component({
   selector: 'bba-daily-hourly-log-details',
@@ -16,4 +17,8 @@ export class DailyHourlyLogDetailsComponent {
   }
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();
+
+  constructor(public resourcesFacade: ResourcesFacade) {
+    resourcesFacade.loadResources();
+  }
 }

@@ -4,19 +4,10 @@
       Projects
     </mat-card-title>
     <mat-list>
-      <mat-list-item
-        *ngFor="let project of projects"
-        class="mat-list-option"
-        (click)="selected.emit(project)"
-      >
-        <span matLine>{{ project.title }}</span>
-        <button
-          *ngIf="!readonly"
-          mat-icon-button
-          type="button"
-          color="warn"
-          (click)="deleted.emit(project); $event.stopImmediatePropagation()"
-        >
+      <mat-list-item *ngFor="let project of projects" class="mat-list-option" (click)="selected.emit(project)">
+        <span matLine>{{ project.id }}</span>
+        <button *ngIf="!readonly" mat-icon-button type="button" color="warn"
+          (click)="deleted.emit(project); $event.stopImmediatePropagation()">
           <mat-icon>clear</mat-icon>
         </button>
       </mat-list-item>
